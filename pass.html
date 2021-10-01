@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Apps Assignment-6</title>
+</head> 
+<body>
+
+<h2>Pass phrase by Rohith Sai Ganguru</h2>
+
+<form>
+    <label for="form_secret">Enter the secret phrase </label>
+    <input type ="password" id="form_secret" value="Let me in"> <br><br>
+
+    <label for="form_phrase">Enter a phrase </label>
+    <input type ="text" id="form_phrase"> <br><br>
+
+    <input type="button" onclick="processPhrase()" value="Check the phrase">
+</form>
+
+
+<p id="result">correct : 0 wrong : 0</p>
+
+<script> 
+correct=0;
+wrong=0;
+function processPhrase (){
+    console.log("onClick Method called");
+    secret = document.getElementById("form_secret").value;
+    phrase = document.getElementById("form_phrase").value;
+    out = document.getElementById("result")
+    if(secret==phrase){
+        correct=correct+1;
+        alert("Access allowed");
+    }
+    else{
+        wrong=wrong+1;
+        alert("Access denied");
+    }
+    out.innerHTML = "correct: "+correct+" wrong: "+wrong;
+}
+</script>
+
+</body>
+</html> 
