@@ -17,12 +17,16 @@
     <input type="button" onclick="processPhrase()" value="Check the phrase">
 </form>
 
-
 <p id="result">correct : 0 wrong : 0</p>
+
+<div class="container">
+    <img src="Antelope.jpg" id="image" alt="Antelope Image" height="200" width="200" onclick=newImage()>
+</div>
 
 <script> 
 correct=0;
 wrong=0;
+usingImage=1;
 function processPhrase (){
     console.log("onClick Method called");
     secret = document.getElementById("form_secret").value;
@@ -37,6 +41,22 @@ function processPhrase (){
         alert("Access denied");
     }
     out.innerHTML = "correct: "+correct+" wrong: "+wrong;
+}
+function newImage(){
+  switch(usingImage) {
+  case 1:
+    document.getElementById("image").src="Giraffe.jpg";
+    usingImage=usingImage+1;
+    break;
+  case 2:
+    document.getElementById("image").src="Goat.jpg";
+    usingImage=usingImage+1;
+    break;
+  case 3:
+    document.getElementById("image").src="Antelope.jpg";
+    usingImage=1;
+    break;
+}
 }
 </script>
 
