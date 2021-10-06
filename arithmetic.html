@@ -19,6 +19,17 @@
         <input type="button" onclick="powers()" value="Compute">
     </form>
     <p id="result"></p>
+    <form>
+        <input type="radio" id="rg1" name="value" value="plus" onclick="processRadio()">
+        <label for="rg1">+</label></br>
+        <input type="radio" id="rg2" name="value" value="minus" onclick="processRadio()">
+        <label for="rg2">-</label></br>
+        <input type="radio" id="rg3" name="value" value="times" onclick="processRadio()">
+        <label for="rg3">*</label></br>
+        <input type="radio" id="rg4" name="value" value="divide" onclick="processRadio()">
+        <label for="rg4">/</label></br>
+    </form>
+    <p>Output : <p id="result1"></p></p>
     <script>
         function powers() {
             s = "";
@@ -29,6 +40,20 @@
             }
             out = document.getElementById("result")
             out.innerHTML = s;
+        }
+        function processRadio() {
+            x = "";
+            base = document.getElementById("form_base").value;
+            exponent = document.getElementById("form_exponent").value;
+            out1 = document.getElementById("result1");
+            if (document.getElementById("rg1").checked)
+                out1.innerHTML = Number(base) + Number(exponent);
+            if (document.getElementById("rg2").checked)
+                out1.innerHTML = base-exponent;
+            if (document.getElementById("rg3").checked)
+                out1.innerHTML = base*exponent;
+            if (document.getElementById("rg4").checked)
+                out1.innerHTML = base/exponent;;
         }
     </script>
 </body>
