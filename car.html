@@ -14,8 +14,8 @@
 </head>
 
 <body>
-
-    <h2>Rohith Sai Ganguru - Orders a car</h2>
+<div class="container text-center">
+    <h2 style="color: brown;">Rohith Sai Ganguru - Orders a car</h2><br>
 
     <form>
         <input type="checkbox" id="rg1" name="value" value="electric">
@@ -24,21 +24,21 @@
         <label for="rg2">ac</label></br>
         <input type="checkbox" id="rg3" name="value" value="gps">
         <label for="rg3">gps</label></br><br>
-        <input type="button" onclick="orderCar()" value="Order a car">
-    </form>
-    <p>Output :
+        <input type="button" class="btn btn-info" onclick="orderCar()" value="Order a car"><br>
+    </form><br>
     <p id="result"></p>
-    </p>
     <form>
         <label for="form_color">Enter a property </label>
-        <input type="text" id="form_color" value="color"> <br><br>
+        <input type="text" class="text-center" id="form_color" value="color"> <br><br>
 
         <label for="form_property">Enter a value </label>
-        <input type="text" id="form_property"> <br><br>
+        <input type="text" class="text-center"id="form_property"> <br><br>
 
-        <input type="button" onclick="updateCar()" value="Update the car">
+        <input type="button" class="btn btn-info" onclick="updateCar()" value="Update the car">
     </form>
+    <br>
     <p id="result1"></p>
+</div>
     <script>
         my_car = {};
         function orderCar() {
